@@ -8,7 +8,6 @@ public class KillZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("接触");
         JudgeText();
     }
 
