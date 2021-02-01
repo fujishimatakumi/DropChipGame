@@ -266,6 +266,101 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 981768904520903948, guid: 439f27a910e86294ca53623baf551591,
+        type: 3}
+      propertyPath: m_chipPrefabNameList.Array.size
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 981768904520903948, guid: 439f27a910e86294ca53623baf551591,
+        type: 3}
+      propertyPath: m_chipPrefabNameList.Array.data[2]
+      value: Chip Clionidae Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 981768904520903948, guid: 439f27a910e86294ca53623baf551591,
+        type: 3}
+      propertyPath: m_chipPrefabNameList.Array.data[3]
+      value: Chip Denkiunagi Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 981768904520903948, guid: 439f27a910e86294ca53623baf551591,
+        type: 3}
+      propertyPath: m_chipPrefabNameList.Array.data[4]
+      value: Chip Hirame Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 981768904520903948, guid: 439f27a910e86294ca53623baf551591,
+        type: 3}
+      propertyPath: m_chipPrefabNameList.Array.data[5]
+      value: Chip Hugu Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 981768904520903948, guid: 439f27a910e86294ca53623baf551591,
+        type: 3}
+      propertyPath: m_chipPrefabNameList.Array.data[6]
+      value: Chip Kaelu Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 981768904520903948, guid: 439f27a910e86294ca53623baf551591,
+        type: 3}
+      propertyPath: m_chipPrefabNameList.Array.data[7]
+      value: Chip Karei Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 981768904520903948, guid: 439f27a910e86294ca53623baf551591,
+        type: 3}
+      propertyPath: m_chipPrefabNameList.Array.data[8]
+      value: Chip Kumanomi Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 981768904520903948, guid: 439f27a910e86294ca53623baf551591,
+        type: 3}
+      propertyPath: m_chipPrefabNameList.Array.data[9]
+      value: Chip Kurodai Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 981768904520903948, guid: 439f27a910e86294ca53623baf551591,
+        type: 3}
+      propertyPath: m_chipPrefabNameList.Array.data[10]
+      value: Chip Maguro Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 981768904520903948, guid: 439f27a910e86294ca53623baf551591,
+        type: 3}
+      propertyPath: m_chipPrefabNameList.Array.data[11]
+      value: Chip Nisikigoi Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 981768904520903948, guid: 439f27a910e86294ca53623baf551591,
+        type: 3}
+      propertyPath: m_chipPrefabNameList.Array.data[12]
+      value: Chip Pirania Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 981768904520903948, guid: 439f27a910e86294ca53623baf551591,
+        type: 3}
+      propertyPath: m_chipPrefabNameList.Array.data[13]
+      value: Chip Ryuguu Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 981768904520903948, guid: 439f27a910e86294ca53623baf551591,
+        type: 3}
+      propertyPath: m_chipPrefabNameList.Array.data[14]
+      value: Chip Same Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 981768904520903948, guid: 439f27a910e86294ca53623baf551591,
+        type: 3}
+      propertyPath: m_chipPrefabNameList.Array.data[15]
+      value: Chip Tako Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 981768904520903948, guid: 439f27a910e86294ca53623baf551591,
+        type: 3}
+      propertyPath: m_chipPrefabNameList.Array.data[16]
+      value: Chip Tobiuo Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 981768904520903948, guid: 439f27a910e86294ca53623baf551591,
+        type: 3}
+      propertyPath: m_chipPrefabNameList.Array.data[17]
+      value: Chip Whale Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 981768904520903948, guid: 439f27a910e86294ca53623baf551591,
+        type: 3}
+      propertyPath: m_chipPrefabNameList.Array.data[0]
+      value: Chip AngelFish Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 981768904520903948, guid: 439f27a910e86294ca53623baf551591,
+        type: 3}
+      propertyPath: m_chipPrefabNameList.Array.data[1]
+      value: Chip Arowana Variant Variant
+      objectReference: {fileID: 0}
     - target: {fileID: 981768904520903950, guid: 439f27a910e86294ca53623baf551591,
         type: 3}
       propertyPath: m_Name
