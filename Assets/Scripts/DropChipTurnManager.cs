@@ -115,5 +115,10 @@ public class DropChipTurnManager : MonoBehaviour, IPunTurnManagerCallbacks
     void IPunTurnManagerCallbacks.OnTurnTimeEnds(int turn)
     {
     }
+
+    public int Number
+    {
+        get { return m_activePlayerIndex + 1; }
+    }
     #endregion
 }
