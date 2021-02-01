@@ -1,18 +1,22 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-// Photon 用の名前空間を参照する
-using Photon.Pun;
-using Photon.Pun.UtilityScripts;
-using Photon.Realtime;
 
 public class KillZone : MonoBehaviour
 {
-    [SerializeField] Text m_judgeText;
+    [SerializeField] DropChipTurnManager m_dropChipTurnManager;
+    [SerializeField] GameObject m_judgeTextObj;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("接触");
-        int number = PhotonNetwork.PlayerList.Length;
-        m_judgeText.text = number + "Win"; 
+        JudgeText();
+    }
+
+    private void JudgeText()
+    {
+        int m_number = m_dropChipTurnManager.Number;
+        Text m_judgeText = m_judgeTextObj.GetComponent<Text>();
+        m_judgeTextObj.SetActive(true);
+        m_judgeText.text = "Player" + m_number + "Win";
     }
 }
