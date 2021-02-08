@@ -9,10 +9,12 @@ public class KillZone : MonoBehaviour
 {
     [SerializeField] DropChipTurnManager m_dropChipTurnManager;
     [SerializeField] Text m_judgeText;
+    [SerializeField] Button m_titleButton;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         JudgeText();
+        m_titleButton.gameObject.SetActive(true);
         Destroy(collision.gameObject);
     }
 
