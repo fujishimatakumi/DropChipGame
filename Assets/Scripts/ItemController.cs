@@ -13,16 +13,27 @@ public class ItemController : MonoBehaviour
 
     private bool m_used = false;
 
+    [SerializeField] GameObject m_redraw;
+    Button bu;
+
     DropChipTurnManager dropChipTurnManager;
 
     void Start()
     {
         dropChipTurnManager = GameObject.Find("Manager").GetComponent<DropChipTurnManager>();
+        bu = GetComponent<Button>();
     }
 
     void Update()
     {
-        
+        if (dropChipTurnManager.ActivePlayer.Equals(PhotonNetwork.LocalPlayer))
+        {
+            bu.interactable = true;
+        }
+        else
+        {
+            bu.interactable = false;
+        }
     }
 
     public void PushReDraw()
@@ -31,7 +42,7 @@ public class ItemController : MonoBehaviour
         {
             PhotonNetwork.Destroy(m_nowChip);
             dropChipTurnManager.SpawnChip();
-            m_used = true;
+            Destroy(bu.gameObject);
         }
     }
 }
