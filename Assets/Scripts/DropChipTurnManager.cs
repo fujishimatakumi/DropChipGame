@@ -18,11 +18,9 @@ public class DropChipTurnManager : MonoBehaviour, IPunTurnManagerCallbacks
     int m_activePlayerIndex = 0;
     PunTurnManager m_turnManager = null;
 
-    ItemController itemController;
-
-    void Start()
+    public int ActivePlayerIndex
     {
-        itemController = GameObject.Find("Button").GetComponent<ItemController>();
+        get { return m_activePlayerIndex; }
     }
 
     /// <summary>
@@ -37,7 +35,7 @@ public class DropChipTurnManager : MonoBehaviour, IPunTurnManagerCallbacks
     /// <summary>
     /// 現在順番が周ってきているプレイヤーの Player オブジェクト
     /// </summary>
-    public Player ActivePlayer
+    Player ActivePlayer
     {
         get
         {
@@ -58,11 +56,11 @@ public class DropChipTurnManager : MonoBehaviour, IPunTurnManagerCallbacks
     /// <summary>
     /// チップを生成する
     /// </summary>
-    public void SpawnChip()
+    void SpawnChip()
     {
         string chipName = m_chipPrefabNameList[Random.Range(0, m_chipPrefabNameList.Length)];
         Debug.Log($"Spawn chip: {chipName}.");
-        itemController.NowChip = PhotonNetwork.Instantiate(chipName, m_chipSpawnPoint.position, Quaternion.identity);
+        PhotonNetwork.Instantiate(chipName, m_chipSpawnPoint.position, Quaternion.identity);
     }
 
     #region IPunTurnManagerCallbacks の実装
