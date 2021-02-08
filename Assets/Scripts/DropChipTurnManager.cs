@@ -18,6 +18,11 @@ public class DropChipTurnManager : MonoBehaviour, IPunTurnManagerCallbacks
     int m_activePlayerIndex = 0;
     PunTurnManager m_turnManager = null;
 
+    public int ActivePlayerIndex
+    {
+        get { return m_activePlayerIndex; }
+    }
+
     /// <summary>
     /// 順番を次のプレイヤーに移動する
     /// </summary>
@@ -114,11 +119,6 @@ public class DropChipTurnManager : MonoBehaviour, IPunTurnManagerCallbacks
 
     void IPunTurnManagerCallbacks.OnTurnTimeEnds(int turn)
     {
-    }
-
-    public int Number
-    {
-        get { return m_activePlayerIndex + 1; }
     }
     #endregion
 }
