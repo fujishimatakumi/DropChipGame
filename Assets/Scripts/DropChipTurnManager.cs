@@ -18,7 +18,15 @@ public class DropChipTurnManager : MonoBehaviour, IPunTurnManagerCallbacks
     /// <summary>現在順番が周ってきているプレイヤーが何番目のプレイヤーなのか示す index</summary>
     int m_activePlayerIndex = 0;
     PunTurnManager m_turnManager = null;
-    [SerializeField] float waitTime;
+    /// <summary> 次のチップの出現までの時間 </summary>
+    [SerializeField] float m_waitTime;
+
+    CameraController m_cameraController;
+
+    private void Start()
+    {
+        m_cameraController = FindObjectOfType<CameraController>();
+    }
 
     /// <summary>
     /// 順番を次のプレイヤーに移動する
@@ -71,7 +79,16 @@ public class DropChipTurnManager : MonoBehaviour, IPunTurnManagerCallbacks
         if (this.ActivePlayer.Equals(PhotonNetwork.LocalPlayer))
         {
             Debug.Log("This is my turn.");
-            SpawnChip();
+            if (m_cameraController != null)
+            {
+                m_cameraController.CameraMove(m_waitTime, () => {
+                    SpawnChip();
+                });
+            }
+            else
+            {
+                SpawnChip();
+            }
         }
         else
         {
@@ -96,7 +113,16 @@ public class DropChipTurnManager : MonoBehaviour, IPunTurnManagerCallbacks
             // 自分の番ならチップを出す
             if (this.ActivePlayer.Equals(PhotonNetwork.LocalPlayer))
             {
-                Invoke("InstanceChip", waitTime);
+                if (m_cameraController != null)
+                {
+                    m_cameraController.CameraMove(m_waitTime, () => {
+                        SpawnChip();
+                    });
+                }
+                else
+                {
+                    SpawnChip();
+                }
             }
             else
             {
@@ -117,25 +143,4 @@ public class DropChipTurnManager : MonoBehaviour, IPunTurnManagerCallbacks
     {
     }
     #endregion
-
-    ChipController TopChip()
-    {
-        ChipController[] chips = GameObject.FindObjectsOfType<ChipController>();
-        ChipController topChip = chips.OrderByDescending(chip => chip.transform.position.y).First();
-        Debug.Log(topChip.transform.position);
-        return topChip;
-    }
-
-    void InstanceChip()
-    {
-        Debug.Log("This is my turn.");
-        Vector3 pos = m_chipSpawnPoint.position;
-        var topY = TopChip().gameObject.transform.position.y + 2f;
-        if (pos.y - 1f < topY)
-        {
-            pos.y = topY;
-        }
-        m_chipSpawnPoint.position = pos;
-        SpawnChip();
-    }
 }
